@@ -16,7 +16,7 @@ A Next.js application for managing student information with keyboard shortcuts, 
 
 ## API Integration
 
-This application connects to a backend API at `https://sm-api-962561856383.europe-west1.run.app` that provides the following endpoints:
+This application connects to a backend API at [server side app](https://github.com/GamalSamadov/sm-api) that provides the following endpoints:
 
 ### Students
 
