@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Student Management System
+
+A Next.js application for managing student information with keyboard shortcuts, built with Next.js, TanStack Query, Tailwind CSS, and shadcn/ui.
+
+## Features
+
+- Add new students with their personal information and enrolled lessons
+- Delete students from the system
+- Update student information
+- View detailed student information including enrolled lessons
+- Keyboard shortcuts for quick actions
+  - `a` - Add a new student
+  - `d` - Delete a student
+  - `u` - Update student information
+  - `s` - View student information
+
+## API Integration
+
+This application connects to a backend API at `https://sm-api-962561856383.europe-west1.run.app` that provides the following endpoints:
+
+### Students
+
+- `GET /students` - Get all students
+- `GET /students/:id` - Get a student by ID
+- `POST /students` - Add a new student
+- `PUT /students` - Update a student
+- `DELETE /students/:id` - Delete a student
+
+### Lessons
+
+- `GET /lessons` - Get all lessons
+- `GET /lessons/:id` - Get a lesson by ID
+- `POST /lessons` - Add a new lesson
+- `PUT /lessons` - Update a lesson
+- `DELETE /lessons/:id` - Delete a lesson
+
+## Technologies Used
+
+- Next.js (App Router)
+- React 19
+- TanStack Query for data fetching and management
+- Axios for API requests
+- Tailwind CSS for styling
+- shadcn/ui for UI components
+- TypeScript for type safety
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file in the root directory with the following content:
 
-## Learn More
+```
+NEXT_PUBLIC_API_URL=https://sm-api-962561856383.europe-west1.run.app
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Once the application is running, you can use keyboard shortcuts to perform various operations:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Press `a` to add a new student
+2. Press `d` to delete a student
+3. Press `u` to update student information
+4. Press `s` to view student information
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Each operation will open a modal with the corresponding form or display.
